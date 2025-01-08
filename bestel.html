@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strijktijd</title>
-    <link rel="stylesheet" href="styles.css">  <!-- Link to shared styles.css -->
+    <title>Bestel</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -18,31 +18,23 @@
         <a href="bestel.html">Bestel</a>
     </nav>
 
-    <!-- Welcome Section -->
+    <!-- Bestel Section -->
     <section class="welcome">
-        <h1>Welkom bij Strijktijd!</h1>
-        <p>Geen zin of tijd om zelf te strijken? Laat het aan ons over! Wij halen jouw kleding op in de omgeving van Amersfoort en zorgen ervoor dat het binnen een week weer fris gestreken bij je thuis is.</p>
+        <h1>Bestellen</h1>
         <p>Vul hieronder in wat je wilt laten strijken. Op de volgende pagina kun je je gegevens invullen en een ophaalafspraak plannen. Zo simpel is het!</p>
         <form id="order-form">
             <div class="order-line">
                 <select>
                     <option value="overhemd">Overhemd</option>
+                    <option value="broek">Broek</option>
+                    <option value="rok">Rok</option>
                     <!-- Add more options as needed -->
                 </select>
                 <input type="number" placeholder="Aantal" min="1">
             </div>
             <button type="button" id="add-line-button">Regel toevoegen</button>
-            <button type="button">Bestel</button>
+            <button type="submit">Bestel</button>
         </form>
-    </section>
-
-    <!-- About Section -->
-    <section class="about">
-        <img src="0A17F05B-BA74-41A4-A1F2-D3DF22977BDE.PNG" alt="About Image">
-        <div class="content">
-            <h2>Over Strijktijd</h2>
-            <p>Bij Strijktijd streven we naar het beste resultaat voor jouw kleding. Of het nu gaat om het strijken van overhemden, broeken of delicate stoffen, wij zorgen ervoor dat jouw kleding in topconditie terugkomt. Ons team van professionals heeft jarenlange ervaring en gebruikt de beste technieken en apparatuur om te zorgen voor een perfect resultaat. Wij begrijpen dat je het druk hebt, dus wij bieden een gemakkelijke en flexibele service waarbij we de kleding bij je ophalen en het binnen een week weer bij je terugbrengen. Zo heb jij meer tijd voor de dingen die echt belangrijk zijn.</p>
-        </div>
     </section>
 
     <script>
@@ -54,7 +46,7 @@
             newLine.className = 'order-line';
 
             const select = document.createElement('select');
-            select.innerHTML = '<option value="overhemd">Overhemd</option>';
+            select.innerHTML = '<option value="overhemd">Overhemd</option><option value="broek">Broek</option><option value="rok">Rok</option>';
 
             const input = document.createElement('input');
             input.type = 'number';
