@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schematic Review Service — Expert Circuit Validation | pcbreview.io</title>
+  <meta name="description" content="Professional schematic review service. We check electrical correctness, power sequencing, protection circuits, decoupling, and datasheet compliance before you start layout." />
+  <link rel="canonical" href="https://www.pcbreview.io/schematic-review.html" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-dot"></span>pcbreview.io</a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pcb-review.html">PCB Review</a></li>
+      <li><a href="schematic-review.html">Schematic</a></li>
+      <li><a href="pcb-layout-review.html">Layout</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="contact.html" class="btn btn-ghost" style="font-size:0.8125rem;padding:5px 12px;">Contact</a>
+      <a href="contact.html" class="btn btn-primary" style="font-size:0.8125rem;padding:5px 12px;">Request a review</a>
+    </div>
+    <button class="nav-ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileNav">
+  <a href="index.html">Home</a><a href="services.html">Services</a><a href="pcb-review.html">PCB Review</a>
+  <a href="schematic-review.html">Schematic Review</a><a href="pcb-layout-review.html">Layout Review</a>
+  <a href="about.html">About</a>
+  <a href="contact.html" class="btn btn-primary" style="margin-top:4px;justify-content:center;">Request a review →</a>
+</div>
+
+<div class="page-hdr">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="services.html">Services</a><span class="sep">/</span>Schematic Review</div>
+    <div class="t-label">Service</div>
+    <h1 class="t-h2" style="margin-bottom:14px;">Schematic Review Service</h1>
+    <p class="sub">Expert evaluation of your circuit design for electrical correctness, robustness, protection strategy, and best-practice compliance — before a single trace is routed.</p>
+  </div>
+</div>
+
+<section class="s-xl" style="border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:3fr 2fr;gap:4rem;align-items:start;">
+
+      <article>
+        <div class="reveal">
+          <h2 class="t-h2" style="margin-bottom:20px;">What ERC misses — and why it matters</h2>
+          <p class="t-body">Your EDA tool's Electrical Rules Check finds wiring errors and unconnected pins. It doesn't tell you whether your power sequencing is correct, your decoupling strategy is adequate, your reset circuit works across temperature, or your ESD protection is correctly specified. A schematic review service does.</p>
+
+          <h3 class="t-h3" style="margin:32px 0 12px;">Power supply design and sequencing</h3>
+          <p class="t-body">We verify that power rails are designed correctly for their load, that sequencing follows IC requirements, and that startup and shutdown behaviour is safe across all conditions. Incorrect sequencing is a leading cause of IC latch-up in production.</p>
+
+          <h3 class="t-h3" style="margin:32px 0 12px;">Decoupling strategy</h3>
+          <p class="t-body">We review decoupling capacitor selection across the full schematic: bulk, mid-frequency, and high-frequency decoupling per power domain, value selection against IC requirements, and appropriate use of ferrite beads for noise isolation between domains.</p>
+
+          <h3 class="t-h3" style="margin:32px 0 12px;">Reset circuitry and startup</h3>
+          <p class="t-body">Reset circuits must function correctly across voltage ramp rates, temperature extremes, and brownout conditions. We check that reset IC specs match the MCU's requirements, that RC networks are correctly calculated, and that watchdog requirements are addressed.</p>
+
+          <h3 class="t-h3" style="margin:32px 0 12px;">Protection circuits</h3>
+          <p class="t-body">We verify ESD protection on all externally exposed IO, reverse-polarity protection appropriate to the supply topology, overcurrent protection where required, and that TVS and transient protection devices have appropriate clamping voltages and response times for the application.</p>
+
+          <h3 class="t-h3" style="margin:32px 0 12px;">Communication interfaces</h3>
+          <p class="t-body">Each interface — I²C, SPI, UART, USB, CAN, Ethernet — is reviewed for correct signal levels, termination, and connector pinout compliance. I²C pull-up values are calculated against bus capacitance for the correct rise time. USB D+/D− compliance, CAN termination, and RS485 fail-safe are all verified.</p>
+
+          <h3 class="t-h3" style="margin:32px 0 12px;">Crystal and clock networks</h3>
+          <p class="t-body">Crystal oscillator circuits are reviewed for correct load capacitor values, appropriate drive current settings, and layout recommendations for routing. PLL configuration and reference clock accuracy are reviewed where applicable.</p>
+
+          <h3 class="t-h3" style="margin:32px 0 12px;">Footprints, symbols, and pinout validation</h3>
+          <p class="t-body">For microcontrollers, FPGAs, and all other ICs, we cross-reference schematic symbols against component datasheets — pin count, pin assignment, polarity, and special-function pin handling. Footprint mismatches between schematic and reality are a significant source of first-spin failures.</p>
+        </div>
+      </article>
+
+      <aside style="position:sticky;top:80px;display:flex;flex-direction:column;gap:1.25rem;">
+        <div class="code-block">
+          <div class="code-block-bar"><span class="cb-dot r"></span><span class="cb-dot y"></span><span class="cb-dot g"></span><span class="cb-title">schematic_review.txt</span></div>
+          <div class="code-block-body">
+            <div class="cl"><span class="ky">// Power</span></div>
+            <div class="cl"><span class="ok">[ PASS ]</span> 3V3 LDO stable ✓</div>
+            <div class="cl"><span class="er">[ CRIT ]</span> VBAT sequence: undefined</div>
+            <div class="cl"><span class="wn">[ WARN ]</span> U3 VDD_IO: no decoupling</div>
+            <div class="cl">&nbsp;</div>
+            <div class="cl"><span class="ky">// Reset</span></div>
+            <div class="cl"><span class="ok">[ PASS ]</span> MCU NRST: dedicated IC ✓</div>
+            <div class="cl"><span class="wn">[ WARN ]</span> RC reset: rise time mismatch</div>
+            <div class="cl">&nbsp;</div>
+            <div class="cl"><span class="ky">// Protection</span></div>
+            <div class="cl"><span class="er">[ CRIT ]</span> USB D+/D−: ESD absent</div>
+            <div class="cl"><span class="wn">[ WARN ]</span> VBAT: no reverse-polarity</div>
+            <div class="cl"><span class="ok">[ PASS ]</span> RS485 TVS: present ✓</div>
+            <div class="cl">&nbsp;</div>
+            <div class="cl"><span class="ky">// Interfaces</span></div>
+            <div class="cl"><span class="wn">[ WARN ]</span> I²C rise time: exceeds spec</div>
+            <div class="cl"><span class="ok">[ PASS ]</span> SPI CPOL/CPHA ✓</div>
+            <div class="cl">&nbsp;</div>
+            <div class="cl cm">// 2 critical · 4 advisory</div>
+          </div>
+        </div>
+
+        <div style="background:var(--ink-1);border-radius:var(--r-lg);padding:1.5rem;">
+          <div class="t-label" style="margin-bottom:10px;color:rgba(255,255,255,0.3);">Schematic review</div>
+          <p style="font-size:0.84rem;color:rgba(255,255,255,0.5);margin-bottom:1.25rem;line-height:1.55;">Catch design errors before layout. Fixing a schematic mistake takes minutes — after fabrication it takes weeks.</p>
+          <a href="contact.html" class="btn btn-blue" style="width:100%;justify-content:center;">Request a review →</a>
+        </div>
+
+        <div class="card-flat">
+          <div class="t-label" style="margin-bottom:10px;">Related services</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <a href="pcb-layout-review.html" style="font-size:0.84rem;color:var(--ink-3);">→ PCB Layout Review</a>
+            <a href="services.html" style="font-size:0.84rem;color:var(--ink-3);">→ BOM Review</a>
+            <a href="services.html" style="font-size:0.84rem;color:var(--ink-3);">→ Full Design Review (Standard)</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKLIST GRID -->
+<section class="s-lg" style="background:var(--off-white);border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div class="section-line reveal"><span class="t-label">Full checklist</span></div>
+    <h2 class="t-h2 reveal" style="margin-bottom:40px;">Everything covered in a schematic review</h2>
+    <div class="col-3 reveal">
+      <div class="card">
+        <h4 style="font-size:0.875rem;margin-bottom:12px;color:var(--ink-1);">⚡ Power Design</h4>
+        <ul class="checklist">
+          <li>Rail voltage and current capacity</li>
+          <li>Power sequencing and timing</li>
+          <li>LDO and regulator selection</li>
+          <li>Switching supply topology</li>
+          <li>Bulk and high-frequency decoupling</li>
+          <li>Soft-start and inrush control</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="font-size:0.875rem;margin-bottom:12px;color:var(--ink-1);">🛡 Protection</h4>
+        <ul class="checklist">
+          <li>ESD on all external IO</li>
+          <li>Reverse polarity protection</li>
+          <li>Overcurrent and short protection</li>
+          <li>TVS diode selection</li>
+          <li>Overvoltage clamping</li>
+          <li>Thermal shutdown</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="font-size:0.875rem;margin-bottom:12px;color:var(--ink-1);">📡 Interfaces</h4>
+        <ul class="checklist">
+          <li>I²C pull-up calculation</li>
+          <li>SPI mode and phase</li>
+          <li>UART level matching</li>
+          <li>USB D+/D− compliance</li>
+          <li>CAN termination</li>
+          <li>Ethernet magnetics</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="font-size:0.875rem;margin-bottom:12px;color:var(--ink-1);">🔄 Reset & Clock</h4>
+        <ul class="checklist">
+          <li>Reset IC spec matching</li>
+          <li>RC reset calculation</li>
+          <li>Watchdog configuration</li>
+          <li>Crystal load capacitors</li>
+          <li>Oscillator drive level</li>
+          <li>PLL reference and filter</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="font-size:0.875rem;margin-bottom:12px;color:var(--ink-1);">📌 Pinout & Symbols</h4>
+        <ul class="checklist">
+          <li>Symbol vs datasheet pin map</li>
+          <li>Footprint vs component check</li>
+          <li>MCU IO assignment</li>
+          <li>Special function pins</li>
+          <li>IO drive current adequacy</li>
+          <li>Power/ground completeness</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="font-size:0.875rem;margin-bottom:12px;color:var(--ink-1);">📋 Documentation</h4>
+        <ul class="checklist">
+          <li>Net naming consistency</li>
+          <li>Annotation completeness</li>
+          <li>Reference designators</li>
+          <li>Value and tolerance accuracy</li>
+          <li>No-connect pin flagging</li>
+          <li>BOM cross-check</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED + CTA -->
+<section class="s-lg" style="border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;" class="reveal">
+      <div style="padding:2rem;border-right:1px solid var(--line);border-top:2px solid var(--blue);">
+        <div class="t-label" style="margin-bottom:8px;">Current</div>
+        <h3 class="t-h3" style="margin-bottom:6px;">Schematic Review</h3>
+        <p class="t-body-sm">Electrical correctness, protection, decoupling, pinout.</p>
+      </div>
+      <div style="padding:2rem;border-right:1px solid var(--line);">
+        <div class="t-label" style="margin-bottom:8px;">Service</div>
+        <h3 class="t-h3" style="margin-bottom:6px;"><a href="pcb-layout-review.html" class="link">PCB Layout Review</a></h3>
+        <p class="t-body-sm">Signal integrity, EMI, grounding, thermal, DFM compliance.</p>
+      </div>
+      <div style="padding:2rem;">
+        <div class="t-label" style="margin-bottom:8px;">Service</div>
+        <h3 class="t-h3" style="margin-bottom:6px;"><a href="services.html" class="link">BOM Review</a></h3>
+        <p class="t-body-sm">EOL risk, lead times, second-sources, cost optimisation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s-lg">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2 class="t-h2">Get a second pair of expert eyes.</h2>
+        <p>Catch schematic errors before layout starts. Fixing them after fabrication takes weeks.</p>
+      </div>
+      <div class="cta-band-btns">
+        <a href="contact.html" class="btn btn-blue btn-lg">Request a schematic review →</a>
+        <a href="services.html" class="btn btn-ghost btn-lg" style="color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.15);">All services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="nav-logo" style="display:inline-flex;"><span class="logo-dot"></span>pcbreview.io</a><p>PCB design review for hardware engineers and product companies.</p></div>
+      <div class="footer-col"><h5>Services</h5><ul><li><a href="schematic-review.html">Schematic Review</a></li><li><a href="pcb-layout-review.html">PCB Layout Review</a></li><li><a href="services.html">All Services</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h5>Resources</h5><ul><li><a href="pcb-review.html">PCB Review Guide</a></li><li><a href="pcb-review.html#faq">FAQ</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 pcbreview.io</p><p>Built by engineers, for engineers.</p></div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
