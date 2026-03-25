@@ -1,209 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PCB Layout Review Service — Signal Integrity, EMI & DFM | pcbreview.io</title>
-  <meta name="description" content="Professional PCB layout review. We check return current paths, signal integrity, EMI risks, thermal management, and DFM compliance before you fabricate." />
-  <link rel="canonical" href="https://www.pcbreview.io/pcb-layout-review.html" />
-  <link rel="stylesheet" href="style.css" />
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>PCB Layout Review Service - Signal Integrity, EMI & DFM | pcbreview.com</title>
+ <meta name="description" content="Professional PCB layout review. We check return current paths, signal integrity, EMI risks, thermal management, and DFM compliance before you fabricate." />
+ <link rel="canonical" href="https://www.pcbreview.com/pcb-layout-review.html" />
+ <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <nav id="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><span class="logo-dot"></span>pcbreview.io</a>
-    <ul class="nav-links">
-      <li><a href="services.html">Services</a></li>
-      <li><a href="pcb-review.html">PCB Review</a></li>
-      <li><a href="schematic-review.html">Schematic</a></li>
-      <li><a href="pcb-layout-review.html">Layout</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-    <div class="nav-right">
-      <a href="contact.html" class="btn btn-ghost" style="font-size:0.8125rem;padding:5px 12px;">Contact</a>
-      <a href="contact.html" class="btn btn-primary" style="font-size:0.8125rem;padding:5px 12px;">Request a review</a>
-    </div>
-    <button class="nav-ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
-  </div>
+ <div class="nav-inner">
+ <a href="index.html" class="nav-logo" style="font-size:1rem;gap:7px;"><span class="logo-dot" style="width:9px;height:9px;"></span>pcbreview.com</a>
+ <ul class="nav-links">
+ <li><a href="services.html">Services</a></li>
+ <li><a href="pcb-review.html">PCB Review</a></li>
+ <li><a href="schematic-review.html">Schematic</a></li>
+ <li><a href="pcb-layout-review.html">Layout</a></li>
+ <li><a href="about.html">About</a></li>
+ </ul>
+ <div class="nav-right">
+ <a href="contact.html" class="btn btn-ghost" style="font-size:0.8125rem;padding:5px 12px;">Contact</a>
+ <a href="contact.html" class="btn btn-primary" style="font-size:0.8125rem;padding:5px 12px;">Request a review</a>
+ </div>
+ <button class="nav-ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+ </div>
 </nav>
 <div class="nav-mobile" id="mobileNav">
-  <a href="index.html">Home</a><a href="services.html">Services</a><a href="pcb-review.html">PCB Review</a>
-  <a href="schematic-review.html">Schematic Review</a><a href="pcb-layout-review.html">Layout Review</a>
-  <a href="about.html">About</a>
-  <a href="contact.html" class="btn btn-primary" style="margin-top:4px;justify-content:center;">Request a review →</a>
+ <a href="index.html">Home</a><a href="services.html">Services</a><a href="pcb-review.html">PCB Review</a>
+ <a href="schematic-review.html">Schematic Review</a><a href="pcb-layout-review.html">Layout Review</a>
+ <a href="about.html">About</a>
+ <a href="contact.html" class="btn btn-primary" style="margin-top:4px;justify-content:center;">Request a review</a>
 </div>
 
 <div class="page-hdr">
-  <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="services.html">Services</a><span class="sep">/</span>PCB Layout Review</div>
-    <div class="t-label">Service</div>
-    <h1 class="t-h2" style="margin-bottom:14px;">PCB Layout Review Service</h1>
-    <p class="sub">Signal integrity, return paths, EMI, thermal behaviour, and DFM — reviewed by engineers who've debugged board failures at the production floor.</p>
-  </div>
+ <div class="container">
+ <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="services.html">Services</a><span class="sep">/</span>PCB Layout Review</div>
+ <div class="t-label">Service</div>
+ <h1 class="t-h2" style="margin-bottom:14px;">PCB Layout Review Service</h1>
+ <p class="sub">Signal integrity, return paths, EMI, thermal behaviour, and DFM - reviewed by engineers who've debugged board failures at the production floor.</p>
+ </div>
 </div>
 
 <section class="s-xl" style="border-bottom:1px solid var(--line);">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:3fr 2fr;gap:4rem;align-items:start;">
+ <div class="container">
+ <div style="display:grid;grid-template-columns:3fr 2fr;gap:4rem;align-items:start;">
 
-      <article>
-        <div class="reveal">
-          <h2 class="t-h2" style="margin-bottom:20px;">What DRC can't catch</h2>
-          <p class="t-body">DRC tells you if your layout is manufacturable. It says nothing about whether it will work in practice. Signal integrity, EMI performance, thermal reliability, and power delivery quality are all determined by layout decisions that DRC cannot evaluate. This is where a PCB layout review makes the difference.</p>
+ <article>
+ <div class="reveal">
+ <h2 class="t-h2" style="margin-bottom:20px;">What DRC can't catch</h2>
+ <p class="t-body">DRC tells you if your layout is manufacturable. It says nothing about whether it will work. Signal integrity, EMI performance, thermal reliability, and power delivery are all determined by layout decisions that no automated tool checks. That is what a PCB layout review is for.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">Return paths and ground plane analysis</h3>
-          <p class="t-body">Every signal current has a return current — and at high frequencies, it wants to flow directly beneath the signal trace. When the return path is broken by a plane slot, a split, or a missing stitching via at a layer change, that return current detours into a longer loop — creating a loop antenna. We analyse return current paths for all high-frequency and high-current nets, and identify every discontinuity that affects EMI or signal integrity.</p>
+ <h3 class="t-h3" style="margin:32px 0 12px;">Return paths and ground plane analysis</h3>
+ <p class="t-body">Every signal current has a return current - and at high frequencies, it wants to flow directly beneath the signal trace. When the return path is broken by a plane slot, a split, or a missing stitching via at a layer change, that return current detours into a longer loop - creating a loop antenna. We analyse return current paths for all high-frequency and high-current nets, and identify every discontinuity that affects EMI or signal integrity.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">Signal integrity and high-speed routing</h3>
-          <p class="t-body">For designs with USB, Ethernet, DDR, HDMI, or high-speed SPI, we review controlled-impedance trace geometry for target compliance, differential pair routing for spacing and length matching, layer transitions for impedance and return path impact, and via stub length where backdrilling is a consideration.</p>
+ <h3 class="t-h3" style="margin:32px 0 12px;">Signal integrity and high-speed routing</h3>
+ <p class="t-body">For designs with USB, Ethernet, DDR, HDMI, or high-speed SPI, we review controlled-impedance trace geometry for target compliance, differential pair routing for spacing and length matching, layer transitions for impedance and return path impact, and via stub length where backdrilling is a consideration.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">Antenna matching and RF layout</h3>
-          <p class="t-body">RF layout tolerances are tight. Transmission line length to the antenna feed, matching network component placement relative to the RF port, ground plane geometry beneath the antenna, and clearance from interference sources all affect performance significantly. We review RF layouts for compliance with IC and module integration guidelines, and flag cases where the physical layout deviates from the reference design in ways that matter.</p>
+ <h3 class="t-h3" style="margin:32px 0 12px;">Antenna matching and RF layout</h3>
+ <p class="t-body">RF layout tolerances are tight. Transmission line length to the antenna feed, matching network component placement relative to the RF port, ground plane geometry beneath the antenna, and clearance from interference sources all affect performance significantly. We review RF layouts for compliance with IC and module integration guidelines, and flag cases where the physical layout deviates from the reference design in ways that matter.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">EMI and EMC risk assessment</h3>
-          <p class="t-body">Most EMI problems originate in layout decisions — not schematic errors. Unfiltered clock signals adjacent to IO lines, switching converter output traces without filtering, common-mode chokes placed after the cable connector, and inadequate stitching capacitors between split power planes are all sources we systematically look for. Our team has experience with CE (CISPR 32) and FCC Part 15 pre-compliance testing. We review with knowledge of what the test chamber will measure.</p>
+ <h3 class="t-h3" style="margin:32px 0 12px;">EMI and EMC risk assessment</h3>
+ <p class="t-body">Most EMI problems originate in layout decisions - not schematic errors. Unfiltered clock signals adjacent to IO lines, switching converter output traces without filtering, common-mode chokes placed after the cable connector, and inadequate stitching capacitors between split power planes are all sources we systematically look for. Our team has experience with CE (CISPR 32) and FCC Part 15 pre-compliance testing. We review with knowledge of what the test chamber will measure.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">PCB stack-up and technology</h3>
-          <p class="t-body">The stack-up choice has major implications for signal integrity and EMI. We verify that signal layers have adjacent reference planes, that the dielectric and trace geometry match impedance targets, and that the overall stack-up suits the design's frequency content. Where stack-up is not finalised, we provide specific recommendations.</p>
+ <h3 class="t-h3" style="margin:32px 0 12px;">PCB stack-up and technology</h3>
+ <p class="t-body">The stack-up choice has major implications for signal integrity and EMI. We verify that signal layers have adjacent reference planes, that the dielectric and trace geometry match impedance targets, and that the overall stack-up suits the design's frequency content. Where stack-up is not finalised, we provide specific recommendations.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">Thermal management</h3>
-          <p class="t-body">Thermal failures are intermittent and worsen with age. We verify exposed-pad implementation for all packages requiring direct thermal connection, check via array sizing and placement for heat transfer, assess copper pour area relative to power dissipation, and verify that the thermal design is consistent with the expected operating environment — not just lab conditions.</p>
+ <h3 class="t-h3" style="margin:32px 0 12px;">Thermal management</h3>
+ <p class="t-body">Thermal failures are intermittent and worsen with age. We verify exposed-pad implementation for all packages requiring direct thermal connection, check via array sizing and placement for heat transfer, assess copper pour area relative to power dissipation, and verify that the thermal design is consistent with the expected operating environment - not just lab conditions.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">DFM — Design for Manufacturability</h3>
-          <p class="t-body">DFM errors range from minor (cost penalty) to critical (non-assembable boards). We check solder mask expansion ratios, courtyard clearances, paste mask aperture sizing for fine-pitch packages, fiducial presence and placement, solderjoint accessibility for rework, and board edge clearances for routing and v-scoring. For designs targeting specific EMS partners, we can apply their DFM rules to the review.</p>
-        </div>
-      </article>
+ <h3 class="t-h3" style="margin:32px 0 12px;">DFM - Design for Manufacturability</h3>
+ <p class="t-body">DFM errors range from minor (cost penalty) to critical (non-assembable boards). We check solder mask expansion ratios, courtyard clearances, paste mask aperture sizing for fine-pitch packages, fiducial presence and placement, solderjoint accessibility for rework, and board edge clearances for routing and v-scoring. For designs targeting specific EMS partners, we can apply their DFM rules to the review.</p>
+ </div>
+ </article>
 
-      <aside style="position:sticky;top:80px;display:flex;flex-direction:column;gap:1.25rem;">
-        <div class="code-block">
-          <div class="code-block-bar"><span class="cb-dot r"></span><span class="cb-dot y"></span><span class="cb-dot g"></span><span class="cb-title">layout_review.txt</span></div>
-          <div class="code-block-body">
-            <div class="cl"><span class="ky">// Return Paths</span></div>
-            <div class="cl"><span class="er">[ CRIT ]</span> UART crosses GND slot — loop ant.</div>
-            <div class="cl"><span class="wn">[ WARN ]</span> Layer 2→4 via: no stitching</div>
-            <div class="cl">&nbsp;</div>
-            <div class="cl"><span class="ky">// Signal Integrity</span></div>
-            <div class="cl"><span class="er">[ CRIT ]</span> DDR4 CLK skew: 180mil (lim 50)</div>
-            <div class="cl"><span class="ok">[ PASS ]</span> USB 90Ω ±4% ✓</div>
-            <div class="cl"><span class="wn">[ WARN ]</span> SPI via stub: 80mil — resonance</div>
-            <div class="cl">&nbsp;</div>
-            <div class="cl"><span class="ky">// EMI</span></div>
-            <div class="cl"><span class="wn">[ WARN ]</span> XTAL adjacent to switching FET</div>
-            <div class="cl"><span class="wn">[ WARN ]</span> VBUS filter placed after connector</div>
-            <div class="cl">&nbsp;</div>
-            <div class="cl"><span class="ky">// Decoupling</span></div>
-            <div class="cl"><span class="er">[ CRIT ]</span> C22: 8.2mm from U3 VDD</div>
-            <div class="cl"><span class="ok">[ PASS ]</span> U1: 0.4mm from pin ✓</div>
-            <div class="cl">&nbsp;</div>
-            <div class="cl"><span class="ky">// Thermal / DFM</span></div>
-            <div class="cl"><span class="wn">[ WARN ]</span> Q2 pad: 4 vias (min 12)</div>
-            <div class="cl"><span class="er">[ CRIT ]</span> U6 paste: 100% (max 80%)</div>
-            <div class="cl">&nbsp;</div>
-            <div class="cl cm">// 4 critical · 5 advisory</div>
-          </div>
-        </div>
+ <aside style="position:sticky;top:80px;display:flex;flex-direction:column;gap:1.25rem;">
+ <div class="code-block">
+ <div class="code-block-bar"><span class="cb-dot r"></span><span class="cb-dot y"></span><span class="cb-dot g"></span><span class="cb-title">layout_review.txt</span></div>
+ <div class="code-block-body">
+ <div class="cl"><span class="ky">// Return Paths</span></div>
+ <div class="cl"><span class="er">[ CRIT ]</span> UART crosses GND slot - loop ant.</div>
+ <div class="cl"><span class="wn">[ WARN ]</span> Layer 2→4 via: no stitching</div>
+ <div class="cl">&nbsp;</div>
+ <div class="cl"><span class="ky">// Signal Integrity</span></div>
+ <div class="cl"><span class="er">[ CRIT ]</span> DDR4 CLK skew: 180mil (lim 50)</div>
+ <div class="cl"><span class="ok">[ PASS ]</span> USB 90Ω ±4% ✓</div>
+ <div class="cl"><span class="wn">[ WARN ]</span> SPI via stub: 80mil - resonance</div>
+ <div class="cl">&nbsp;</div>
+ <div class="cl"><span class="ky">// EMI</span></div>
+ <div class="cl"><span class="wn">[ WARN ]</span> XTAL adjacent to switching FET</div>
+ <div class="cl"><span class="wn">[ WARN ]</span> VBUS filter placed after connector</div>
+ <div class="cl">&nbsp;</div>
+ <div class="cl"><span class="ky">// Decoupling</span></div>
+ <div class="cl"><span class="er">[ CRIT ]</span> C22: 8.2mm from U3 VDD</div>
+ <div class="cl"><span class="ok">[ PASS ]</span> U1: 0.4mm from pin ✓</div>
+ <div class="cl">&nbsp;</div>
+ <div class="cl"><span class="ky">// Thermal / DFM</span></div>
+ <div class="cl"><span class="wn">[ WARN ]</span> Q2 pad: 4 vias (min 12)</div>
+ <div class="cl"><span class="er">[ CRIT ]</span> U6 paste: 100% (max 80%)</div>
+ <div class="cl">&nbsp;</div>
+ <div class="cl cm">// 4 critical · 5 advisory</div>
+ </div>
+ </div>
 
-        <div style="background:var(--ink-1);border-radius:var(--r-lg);padding:1.5rem;">
-          <div class="t-label" style="margin-bottom:10px;color:rgba(255,255,255,0.3);">Layout review</div>
-          <p style="font-size:0.84rem;color:rgba(255,255,255,0.5);margin-bottom:1.25rem;line-height:1.55;">Most layout issues are invisible to DRC but cause real failures in the lab and in the field.</p>
-          <a href="contact.html" class="btn btn-blue" style="width:100%;justify-content:center;">Request a review →</a>
-        </div>
+ <div style="background:var(--ink-1);border-radius:var(--r-lg);padding:1.5rem;">
+ <div class="t-label" style="margin-bottom:10px;color:rgba(255,255,255,0.3);">Layout review</div>
+ <p style="font-size:0.84rem;color:rgba(255,255,255,0.5);margin-bottom:1.25rem;line-height:1.55;">Most layout issues are invisible to DRC but cause real failures in the lab and in the field.</p>
+ <a href="contact.html" class="btn btn-blue" style="width:100%;justify-content:center;">Request a review →</a>
+ </div>
 
-        <div class="card-flat">
-          <div class="t-label" style="margin-bottom:10px;">What we check</div>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
-            <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ Return current paths</li>
-            <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ Impedance control</li>
-            <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ Differential pairs</li>
-            <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ Decoupling placement</li>
-            <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ EMI risk sources</li>
-            <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ Thermal management</li>
-            <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ DFM compliance</li>
-            <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ Stack-up validation</li>
-            <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ RF layout (if applicable)</li>
-          </ul>
-        </div>
-      </aside>
-    </div>
-  </div>
+ <div class="card-flat">
+ <div class="t-label" style="margin-bottom:10px;">What we check</div>
+ <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+ <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ Return current paths</li>
+ <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ Impedance control</li>
+ <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ Differential pairs</li>
+ <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ Decoupling placement</li>
+ <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ EMI risk sources</li>
+ <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ Thermal management</li>
+ <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ DFM compliance</li>
+ <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ Stack-up validation</li>
+ <li style="font-size:0.8rem;color:var(--ink-3);font-family:var(--mono);">→ RF layout (if applicable)</li>
+ </ul>
+ </div>
+ </aside>
+ </div>
+ </div>
 </section>
 
 <!-- EXAMPLE FINDINGS -->
 <section class="s-lg" style="background:var(--off-white);border-bottom:1px solid var(--line);">
-  <div class="container">
-    <div class="section-line reveal"><span class="t-label">Example findings</span></div>
-    <h2 class="t-h2 reveal" style="margin-bottom:40px;">Typical issues we identify</h2>
-    <div class="col-2 reveal">
-      <div class="finding-card">
-        <div class="finding-head">
-          <span class="t-h3" style="font-size:0.9rem;">GND plane slot under high-speed trace</span>
-          <span class="tag tag-red">Critical</span>
-        </div>
-        <div class="finding-body">
-          <p>A slot in the ground plane directly beneath a 50MHz UART trace forces the return current into a 14mm loop — creating a loop antenna. This is a common root cause of CE radiated emission failures.</p>
-          <div class="finding-fix"><strong>→ Fix:</strong> Re-route trace to avoid slot, or fill slot and add stitching vias on either side.</div>
-        </div>
-      </div>
-      <div class="finding-card">
-        <div class="finding-head">
-          <span class="t-h3" style="font-size:0.9rem;">Decoupling cap 8.2mm from IC power pin</span>
-          <span class="tag tag-red">Critical</span>
-        </div>
-        <div class="finding-body">
-          <p>The 100nF cap for the core power rail of U3 is 8.2mm from the VDD pin. At 100MHz, trace inductance dominates — the capacitor provides minimal decoupling where it is needed most.</p>
-          <div class="finding-fix"><strong>→ Fix:</strong> Move within 0.5mm of VDD pin. Use via-in-pad if space is constrained.</div>
-        </div>
-      </div>
-      <div class="finding-card">
-        <div class="finding-head">
-          <span class="t-h3" style="font-size:0.9rem;">Insufficient thermal vias — MOSFET pad</span>
-          <span class="tag tag-amber">Advisory</span>
-        </div>
-        <div class="finding-body">
-          <p>Q2 has 4 thermal vias. At peak load of 8A, junction temperature exceeds the rated maximum by ~15°C under worst-case ambient. Minimum recommended count is 12.</p>
-          <div class="finding-fix"><strong>→ Fix:</strong> Increase to ≥12 vias at 0.3mm drill. Extend copper pour on inner layers.</div>
-        </div>
-      </div>
-      <div class="finding-card">
-        <div class="finding-head">
-          <span class="t-h3" style="font-size:0.9rem;">Solder paste aperture too large — QFN-28</span>
-          <span class="tag tag-amber">Advisory</span>
-        </div>
-        <div class="finding-body">
-          <p>The paste aperture for U6 exposed pad is at 100% coverage. Standard guidelines recommend 60–75% with a segmented pattern to prevent solder voiding and tombstoning during reflow.</p>
-          <div class="finding-fix"><strong>→ Fix:</strong> Segment aperture into 3×3 grid at 65% total coverage.</div>
-        </div>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="section-line reveal"><span class="t-label">Example findings</span></div>
+ <h2 class="t-h2 reveal" style="margin-bottom:40px;">Typical issues we identify</h2>
+ <div class="col-2 reveal">
+ <div class="finding-card">
+ <div class="finding-head">
+ <span class="t-h3" style="font-size:0.9rem;">GND plane slot under high-speed trace</span>
+ <span class="tag tag-red">Critical</span>
+ </div>
+ <div class="finding-body">
+ <p>A slot in the ground plane directly beneath a 50MHz UART trace forces the return current into a 14mm loop - creating a loop antenna. This is a common root cause of CE radiated emission failures.</p>
+ <div class="finding-fix"><strong>→ Fix:</strong> Re-route trace to avoid slot, or fill slot and add stitching vias on either side.</div>
+ </div>
+ </div>
+ <div class="finding-card">
+ <div class="finding-head">
+ <span class="t-h3" style="font-size:0.9rem;">Decoupling cap 8.2mm from IC power pin</span>
+ <span class="tag tag-red">Critical</span>
+ </div>
+ <div class="finding-body">
+ <p>The 100nF cap for the core power rail of U3 is 8.2mm from the VDD pin. At 100MHz, trace inductance dominates - the capacitor provides minimal decoupling where it is needed most.</p>
+ <div class="finding-fix"><strong>→ Fix:</strong> Move within 0.5mm of VDD pin. Use via-in-pad if space is constrained.</div>
+ </div>
+ </div>
+ <div class="finding-card">
+ <div class="finding-head">
+ <span class="t-h3" style="font-size:0.9rem;">Insufficient thermal vias - MOSFET pad</span>
+ <span class="tag tag-amber">Advisory</span>
+ </div>
+ <div class="finding-body">
+ <p>Q2 has 4 thermal vias. At peak load of 8A, junction temperature exceeds the rated maximum by ~15°C under worst-case ambient. Minimum recommended count is 12.</p>
+ <div class="finding-fix"><strong>→ Fix:</strong> Increase to ≥12 vias at 0.3mm drill. Extend copper pour on inner layers.</div>
+ </div>
+ </div>
+ <div class="finding-card">
+ <div class="finding-head">
+ <span class="t-h3" style="font-size:0.9rem;">Solder paste aperture too large - QFN-28</span>
+ <span class="tag tag-amber">Advisory</span>
+ </div>
+ <div class="finding-body">
+ <p>The paste aperture for U6 exposed pad is at 100% coverage. Standard guidelines recommend 60–75% with a segmented pattern to prevent solder voiding and tombstoning during reflow.</p>
+ <div class="finding-fix"><strong>→ Fix:</strong> Segment aperture into 3×3 grid at 65% total coverage.</div>
+ </div>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- CTA -->
 <section class="s-lg">
-  <div class="container">
-    <div class="cta-band reveal">
-      <div>
-        <h2 class="t-h2">Prevent PCB re-spins before production.</h2>
-        <p>Layout issues are invisible to DRC. Let our engineers catch them before you fabricate.</p>
-      </div>
-      <div class="cta-band-btns">
-        <a href="contact.html" class="btn btn-blue btn-lg">Request a layout review →</a>
-        <a href="services.html" class="btn btn-ghost btn-lg" style="color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.15);">All services</a>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="cta-band reveal">
+ <div>
+ <h2 class="t-h2">Prevent PCB re-spins before production.</h2>
+ <p>Layout issues are invisible to DRC. Let our engineers catch them before you fabricate.</p>
+ </div>
+ <div class="cta-band-btns">
+ <a href="contact.html" class="btn btn-blue btn-lg">Request a layout review →</a>
+ <a href="services.html" class="btn btn-ghost btn-lg" style="color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.15);">All services</a>
+ </div>
+ </div>
+ </div>
 </section>
 
 <footer id="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><a href="index.html" class="nav-logo" style="display:inline-flex;"><span class="logo-dot"></span>pcbreview.io</a><p>PCB design review for hardware engineers and product companies.</p></div>
-      <div class="footer-col"><h5>Services</h5><ul><li><a href="schematic-review.html">Schematic Review</a></li><li><a href="pcb-layout-review.html">PCB Layout Review</a></li><li><a href="services.html">All Services</a></li></ul></div>
-      <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer-col"><h5>Resources</h5><ul><li><a href="pcb-review.html">PCB Review Guide</a></li><li><a href="pcb-review.html#faq">FAQ</a></li></ul></div>
-    </div>
-    <div class="footer-bottom"><p>© 2025 pcbreview.io</p><p>Built by engineers, for engineers.</p></div>
-  </div>
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand"><a href="index.html" class="nav-logo" style="display:inline-flex;font-size:1rem;gap:7px;"><span class="logo-dot" style="width:9px;height:9px;"></span>pcbreview.com</a><p>PCB design review by senior hardware engineers. Built for startups, solo developers, and small product teams.</p></div>
+ <div class="footer-col"><h5>Services</h5><ul><li><a href="schematic-review.html">Schematic Review</a></li><li><a href="pcb-layout-review.html">PCB Layout Review</a></li><li><a href="services.html">All Services</a></li></ul></div>
+ <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+ <div class="footer-col"><h5>Resources</h5><ul><li><a href="pcb-review.html">PCB Review Guide</a></li><li><a href="pcb-review.html#faq">FAQ</a></li></ul></div>
+ </div>
+ <div class="footer-bottom"><p>© 2025 pcbreview.com</p><p>Built by engineers, for engineers.</p></div>
+ </div>
 </footer>
 <script src="main.js"></script>
 </body>

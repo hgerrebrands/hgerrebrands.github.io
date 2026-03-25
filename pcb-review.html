@@ -1,287 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PCB Design Review — Why It Matters & Common Mistakes | pcbreview.io</title>
-  <meta name="description" content="What a PCB design review covers, why it prevents costly re-spins, and the most common PCB design mistakes engineers make. Expert hardware engineering perspective." />
-  <link rel="canonical" href="https://www.pcbreview.io/pcb-review.html" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a PCB design review?","acceptedAnswer":{"@type":"Answer","text":"A structured technical evaluation of your hardware design — schematic, PCB layout, and BOM — carried out by an experienced hardware engineer before you fabricate. It identifies errors, risks, and improvement opportunities while they're still cheap to fix."}},{"@type":"Question","name":"When should I get a PCB design review?","acceptedAnswer":{"@type":"Answer","text":"Ideally before your first fabrication order. The earlier the review, the cheaper fixes are. Reviews are also valuable before moving to volume production, or after a failed prototype."}},{"@type":"Question","name":"How much does a PCB design review cost?","acceptedAnswer":{"@type":"Answer","text":"Pricing depends on design complexity, layer count, and scope. We offer Basic, Standard, and Advanced packages. Contact us for a project-specific quote."}},{"@type":"Question","name":"What files are required for a PCB design review?","acceptedAnswer":{"@type":"Answer","text":"Schematic (PDF or native EDA file), PCB layout (native or Gerbers), and BOM (Excel, CSV, or PDF). We accept KiCad, Altium, Eagle, OrCAD, and EasyEDA formats."}},{"@type":"Question","name":"How long does a PCB design review take?","acceptedAnswer":{"@type":"Answer","text":"Standard reviews: 2–3 business days. Advanced reviews: 4–5 business days. Rush turnaround is available on request."}}]}</script>
-  <link rel="stylesheet" href="style.css" />
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>PCB Design Review - Why It Matters & Common Mistakes | pcbreview.com</title>
+ <meta name="description" content="What a PCB design review actually covers, why automated tools miss most real problems, and the most common mistakes we find in practice. Written by hardware engineers." />
+ <link rel="canonical" href="https://www.pcbreview.com/pcb-review.html" />
+ <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a PCB design review?","acceptedAnswer":{"@type":"Answer","text":"A structured technical evaluation of your hardware design - schematic, PCB layout, and BOM - carried out by an experienced hardware engineer before you fabricate. It identifies errors, risks, and improvement opportunities while they're still cheap to fix."}},{"@type":"Question","name":"When should I get a PCB design review?","acceptedAnswer":{"@type":"Answer","text":"Ideally before your first fabrication order. The earlier the review, the cheaper fixes are. Reviews are also valuable before moving to volume production, or after a failed prototype."}},{"@type":"Question","name":"How much does a PCB design review cost?","acceptedAnswer":{"@type":"Answer","text":"Pricing depends on design complexity, layer count, and scope. We offer Basic, Standard, and Advanced packages. Contact us for a project-specific quote."}},{"@type":"Question","name":"What files are required for a PCB design review?","acceptedAnswer":{"@type":"Answer","text":"Schematic (PDF or native EDA file), PCB layout (native or Gerbers), and BOM (Excel, CSV, or PDF). We accept KiCad, Altium, Eagle, OrCAD, and EasyEDA formats."}},{"@type":"Question","name":"How long does a PCB design review take?","acceptedAnswer":{"@type":"Answer","text":"Standard reviews: 2–3 business days. Advanced reviews: 4–5 business days. Rush turnaround is available on request."}}]}</script>
+ <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <nav id="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><span class="logo-dot"></span>pcbreview.io</a>
-    <ul class="nav-links">
-      <li><a href="services.html">Services</a></li>
-      <li><a href="pcb-review.html">PCB Review</a></li>
-      <li><a href="schematic-review.html">Schematic</a></li>
-      <li><a href="pcb-layout-review.html">Layout</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-    <div class="nav-right">
-      <a href="contact.html" class="btn btn-ghost" style="font-size:0.8125rem;padding:5px 12px;">Contact</a>
-      <a href="contact.html" class="btn btn-primary" style="font-size:0.8125rem;padding:5px 12px;">Request a review</a>
-    </div>
-    <button class="nav-ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
-  </div>
+ <div class="nav-inner">
+ <a href="index.html" class="nav-logo" style="font-size:1rem;gap:7px;"><span class="logo-dot" style="width:9px;height:9px;"></span>pcbreview.com</a>
+ <ul class="nav-links">
+ <li><a href="services.html">Services</a></li>
+ <li><a href="pcb-review.html">PCB Review</a></li>
+ <li><a href="schematic-review.html">Schematic</a></li>
+ <li><a href="pcb-layout-review.html">Layout</a></li>
+ <li><a href="about.html">About</a></li>
+ </ul>
+ <div class="nav-right">
+ <a href="contact.html" class="btn btn-ghost" style="font-size:0.8125rem;padding:5px 12px;">Contact</a>
+ <a href="contact.html" class="btn btn-primary" style="font-size:0.8125rem;padding:5px 12px;">Request a review</a>
+ </div>
+ <button class="nav-ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+ </div>
 </nav>
 <div class="nav-mobile" id="mobileNav">
-  <a href="index.html">Home</a><a href="services.html">Services</a><a href="pcb-review.html">PCB Review</a>
-  <a href="schematic-review.html">Schematic Review</a><a href="pcb-layout-review.html">Layout Review</a>
-  <a href="about.html">About</a>
-  <a href="contact.html" class="btn btn-primary" style="margin-top:4px;justify-content:center;">Request a review →</a>
+ <a href="index.html">Home</a><a href="services.html">Services</a><a href="pcb-review.html">PCB Review</a>
+ <a href="schematic-review.html">Schematic Review</a><a href="pcb-layout-review.html">Layout Review</a>
+ <a href="about.html">About</a>
+ <a href="contact.html" class="btn btn-primary" style="margin-top:4px;justify-content:center;">Request a review</a>
 </div>
 
 <div class="page-hdr">
-  <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span>PCB Design Review</div>
-    <div class="t-label">Engineering Guide</div>
-    <h1 class="t-h2" style="margin-bottom:14px;">PCB Design Review — Why It Matters</h1>
-    <p class="sub">What a professional hardware design review covers, why it prevents costly re-spins, and the most common PCB design mistakes we find in practice.</p>
-  </div>
+ <div class="container">
+ <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span>PCB Design Review</div>
+ <div class="t-label">Engineering Guide</div>
+ <h1 class="t-h2" style="margin-bottom:14px;">PCB Design Review - Why It Matters</h1>
+ <p class="sub">What a PCB design review actually covers, why most problems are invisible to ERC and DRC, and the mistakes we see most often in practice.</p>
+ </div>
 </div>
 
 <!-- MAIN ARTICLE + SIDEBAR -->
 <section class="s-xl" style="border-bottom:1px solid var(--line);">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:2fr 1fr;gap:5rem;align-items:start;">
+ <div class="container">
+ <div style="display:grid;grid-template-columns:2fr 1fr;gap:5rem;align-items:start;">
 
-      <!-- Article -->
-      <article>
+ <!-- Article -->
+ <article>
 
-        <div class="reveal">
-          <h2 class="t-h2" style="margin-bottom:20px;">Why PCB design reviews are critical before manufacturing</h2>
-          <p class="t-body">Hardware is unforgiving. A software bug can be patched and deployed in minutes. A design error discovered after PCB fabrication means weeks of delay and thousands of dollars in wasted material, assembly, and engineering time — before you even consider the market timing impact.</p>
-          <p class="t-body">A PCB design review is a structured, expert evaluation of your hardware before fabrication. It's the highest-ROI quality gate in hardware development — because the cost of fixing a mistake scales exponentially once you move from design files to physical boards.</p>
+ <div class="reveal">
+ <h2 class="t-h2" style="margin-bottom:20px;">Why PCB design reviews are critical before manufacturing</h2>
+ <p class="t-body">Hardware is unforgiving. A software bug can be patched and deployed in minutes. A design error discovered after PCB fabrication means weeks of delay and thousands of dollars in wasted material, assembly, and engineering time - before you even consider the market timing impact.</p>
+ <p class="t-body">A PCB design review is a structured, expert evaluation of your hardware before fabrication. It's the highest-ROI quality gate in hardware development - because the cost of fixing a mistake scales exponentially once you move from design files to physical boards.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">The real cost of skipping a review</h3>
-          <p class="t-body">A board respin at prototype stage typically costs between $3,000 and $15,000 when you account for bare board fabrication, assembly, component procurement, and engineering time. For a hardware startup, a six-to-eight-week respin delay can mean missing a product launch, a funding milestone, or a customer pilot.</p>
-          <p class="t-body">A professional PCB design review costs a fraction of a single respin — and catches the issues that cause them.</p>
-        </div>
+ <h3 class="t-h3" style="margin:32px 0 12px;">The real cost of skipping a review</h3>
+ <p class="t-body">A board respin at prototype stage typically costs between $3,000 and $15,000 when you account for bare board fabrication, assembly, component procurement, and engineering time. For a hardware startup, a six-to-eight-week respin delay can mean missing a product launch, a funding milestone, or a customer pilot.</p>
+ <p class="t-body">A professional PCB design review costs a fraction of a single respin - and catches the issues that cause them.</p>
+ </div>
 
-        <div class="hr" style="margin:48px 0;"></div>
+ <div class="hr" style="margin:48px 0;"></div>
 
-        <div class="reveal">
-          <h2 class="t-h2" style="margin-bottom:20px;">What our PCB design review covers</h2>
-          <p class="t-body">Our review is not a checklist tool or automated DRC pass. It's a human expert evaluation that applies real engineering judgment to your specific design, in context.</p>
+ <div class="reveal">
+ <h2 class="t-h2" style="margin-bottom:20px;">What our PCB design review covers</h2>
+ <p class="t-body">Our review is not a checklist tool or automated DRC pass. It's a human expert evaluation that applies real engineering judgment to your specific design, in context.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">Design principles and circuit correctness</h3>
-          <p class="t-body">We verify that the design approach is fundamentally sound — power domains defined correctly, communication interfaces connected consistently with protocol requirements, and no fundamental electrical mistakes in the circuit topology.</p>
+ <h3 class="t-h3" style="margin:32px 0 12px;">Design principles and circuit correctness</h3>
+ <p class="t-body">We verify that the design approach is fundamentally sound - power domains defined correctly, communication interfaces connected consistently with protocol requirements, and no fundamental electrical mistakes in the circuit topology.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">Connections, nets, and annotation</h3>
-          <p class="t-body">Unconnected pins, missing pull-ups, inverted logic signals, and incorrect net assignments are common schematic errors that ERC doesn't catch. We verify net completeness and logical correctness across the entire design.</p>
+ <h3 class="t-h3" style="margin:32px 0 12px;">Connections, nets, and annotation</h3>
+ <p class="t-body">Unconnected pins, missing pull-ups, inverted logic signals, and incorrect net assignments are common schematic errors that ERC doesn't catch. We verify net completeness and logical correctness across the entire design.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">Footprints and symbols</h3>
-          <p class="t-body">Mismatches between schematic symbols and physical footprints — wrong pin count, incorrect pad sizing, swapped signal assignments — produce boards that fail to assemble or function. We cross-reference symbols against component datasheets.</p>
+ <h3 class="t-h3" style="margin:32px 0 12px;">Footprints and symbols</h3>
+ <p class="t-body">Mismatches between schematic symbols and physical footprints - wrong pin count, incorrect pad sizing, swapped signal assignments - produce boards that fail to assemble or function. We cross-reference symbols against component datasheets.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">Signal integrity and high-speed routing</h3>
-          <p class="t-body">For designs with high-speed interfaces — USB, Ethernet, DDR, SPI above 10MHz — trace impedance and routing geometry directly determine whether data is reliably received. We review controlled-impedance traces, differential pair routing, length matching, and via placement on high-frequency nets.</p>
+ <h3 class="t-h3" style="margin:32px 0 12px;">Signal integrity and high-speed routing</h3>
+ <p class="t-body">For designs with high-speed interfaces - USB, Ethernet, DDR, SPI above 10MHz - trace impedance and routing geometry directly determine whether data is reliably received. We review controlled-impedance traces, differential pair routing, length matching, and via placement on high-frequency nets.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">Antenna matching and RF layout</h3>
-          <p class="t-body">RF layout is unforgiving. Transmission line geometry, matching network placement, ground plane cutout beneath the antenna, and clearance from noise sources all affect RF performance significantly. We review RF designs — discrete antennas, modules, and RF ICs — for compliance with integration guidelines and RF best practices.</p>
+ <h3 class="t-h3" style="margin:32px 0 12px;">Antenna matching and RF layout</h3>
+ <p class="t-body">RF layout is unforgiving. Transmission line geometry, matching network placement, ground plane cutout beneath the antenna, and clearance from noise sources all affect RF performance significantly. We review RF designs - discrete antennas, modules, and RF ICs - for compliance with integration guidelines and RF best practices.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">Component selection and alternatives</h3>
-          <p class="t-body">We flag over-specified components (unnecessary cost), under-rated components (risk), and single-source parts (supply chain vulnerability). Where relevant, we identify pin-compatible second-source alternatives.</p>
+ <h3 class="t-h3" style="margin:32px 0 12px;">Component selection and alternatives</h3>
+ <p class="t-body">We flag over-specified components (unnecessary cost), under-rated components (risk), and single-source parts (supply chain vulnerability). Where relevant, we identify pin-compatible second-source alternatives.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">PCB stack-up and technology</h3>
-          <p class="t-body">Stack-up selection has direct implications for signal integrity, power distribution, and EMI. We verify that signal layers are referenced to adjacent ground planes, that dielectric and trace geometry support impedance targets, and that the stack-up is appropriate for the design's frequency content.</p>
+ <h3 class="t-h3" style="margin:32px 0 12px;">PCB stack-up and technology</h3>
+ <p class="t-body">Stack-up selection has direct implications for signal integrity, power distribution, and EMI. We verify that signal layers are referenced to adjacent ground planes, that dielectric and trace geometry support impedance targets, and that the stack-up is appropriate for the design's frequency content.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">Pinout validation</h3>
-          <p class="t-body">MCU and FPGA pin assignments are verified against datasheet requirements — power pins, special-function pins, peripheral mapping, and IO drive capability. Wrong pinout assignments are responsible for a significant share of first-spin failures.</p>
+ <h3 class="t-h3" style="margin:32px 0 12px;">Pinout validation</h3>
+ <p class="t-body">MCU and FPGA pin assignments are verified against datasheet requirements - power pins, special-function pins, peripheral mapping, and IO drive capability. Wrong pinout assignments are responsible for a significant share of first-spin failures.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">Thermal behaviour</h3>
-          <p class="t-body">Thermal failure modes are insidious — intermittent, worsening with age, appearing only under specific conditions. We verify exposed-pad implementation, via array sizing for heat transfer, copper pour area for power dissipation, and whether the thermal design matches the expected operating environment.</p>
+ <h3 class="t-h3" style="margin:32px 0 12px;">Thermal behaviour</h3>
+ <p class="t-body">Thermal failure modes are insidious - intermittent, worsening with age, appearing only under specific conditions. We verify exposed-pad implementation, via array sizing for heat transfer, copper pour area for power dissipation, and whether the thermal design matches the expected operating environment.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">Return paths and grounding</h3>
-          <p class="t-body">The single most common cause of EMI problems in PCB design is poor return current management. When a plane has a slot or split beneath a signal trace, return current takes a longer, higher-inductance path — creating a loop antenna. We systematically analyse return paths for all high-frequency and high-current nets.</p>
+ <h3 class="t-h3" style="margin:32px 0 12px;">Return paths and grounding</h3>
+ <p class="t-body">The single most common cause of EMI problems in PCB design is poor return current management. When a plane has a slot or split beneath a signal trace, return current takes a longer, higher-inductance path - creating a loop antenna. We systematically analyse return paths for all high-frequency and high-current nets.</p>
 
-          <h3 class="t-h3" style="margin:32px 0 12px;">Cost optimisation at layout level</h3>
-          <p class="t-body">Via size minimums, clearance tightness, and board dimensions all affect fabrication cost without functional benefit. We flag opportunities to reduce manufacturing cost through straightforward layout changes.</p>
-        </div>
+ <h3 class="t-h3" style="margin:32px 0 12px;">Cost optimisation at layout level</h3>
+ <p class="t-body">Via size minimums, clearance tightness, and board dimensions all affect fabrication cost without functional benefit. We flag opportunities to reduce manufacturing cost through straightforward layout changes.</p>
+ </div>
 
-        <div class="hr" style="margin:48px 0;"></div>
+ <div class="hr" style="margin:48px 0;"></div>
 
-        <!-- COMMON MISTAKES -->
-        <div id="mistakes" class="reveal">
-          <h2 class="t-h2" style="margin-bottom:8px;">Common PCB design mistakes</h2>
-          <p class="t-body" style="margin-bottom:32px;">These are the most frequent categories of issues our hardware design review service identifies — across schematics, layouts, and BOMs, across all experience levels.</p>
+ <!-- COMMON MISTAKES -->
+ <div id="mistakes" class="reveal">
+ <h2 class="t-h2" style="margin-bottom:8px;">Common PCB design mistakes</h2>
+ <p class="t-body" style="margin-bottom:32px;">These are the most frequent categories of issues our hardware design review service identifies - across schematics, layouts, and BOMs, across all experience levels.</p>
 
-          <div style="display:flex;flex-direction:column;gap:1px;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;margin-bottom:32px;">
+ <div style="display:flex;flex-direction:column;gap:1px;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;margin-bottom:32px;">
 
-            <div class="finding-card" style="border-radius:0;border:none;border-bottom:1px solid var(--line);">
-              <div class="finding-head">
-                <span class="t-h3" style="font-size:0.9375rem;">Grounding and return path issues</span>
-                <span class="tag tag-red">Critical</span>
-              </div>
-              <div class="finding-body">
-                <p>Ground plane fragmentation is the root cause of a large proportion of EMI and signal integrity problems. Running high-speed traces over ground plane slots or splits forces return currents into long detours — creating loop antennas and dramatically increasing radiated emissions. A common root cause of CE and FCC pre-compliance failures.</p>
-                <p>Mixed digital/analog ground domain mismanagement, insufficient stitching vias at layer transitions, and high-current ground paths adjacent to sensitive analog nodes are all variants of the same underlying problem.</p>
-                <div class="finding-fix"><strong>→ Fix:</strong> Fill slots or re-route traces to avoid crossing ground plane discontinuities. Add stitching vias at all layer transitions on high-frequency nets.</div>
-              </div>
-            </div>
+ <div class="finding-card" style="border-radius:0;border:none;border-bottom:1px solid var(--line);">
+ <div class="finding-head">
+ <span class="t-h3" style="font-size:0.9375rem;">Grounding and return path issues</span>
+ <span class="tag tag-red">Critical</span>
+ </div>
+ <div class="finding-body">
+ <p>Ground plane fragmentation is the root cause of a large proportion of EMI and signal integrity problems. Running high-speed traces over ground plane slots or splits forces return currents into long detours - creating loop antennas and dramatically increasing radiated emissions. A common root cause of CE and FCC pre-compliance failures.</p>
+ <p>Mixed digital/analog ground domain mismanagement, insufficient stitching vias at layer transitions, and high-current ground paths adjacent to sensitive analog nodes are all variants of the same underlying problem.</p>
+ <div class="finding-fix"><strong>→ Fix:</strong> Fill slots or re-route traces to avoid crossing ground plane discontinuities. Add stitching vias at all layer transitions on high-frequency nets.</div>
+ </div>
+ </div>
 
-            <div class="finding-card" style="border-radius:0;border:none;border-bottom:1px solid var(--line);">
-              <div class="finding-head">
-                <span class="t-h3" style="font-size:0.9375rem;">Missing or misplaced decoupling capacitors</span>
-                <span class="tag tag-red">Critical</span>
-              </div>
-              <div class="finding-body">
-                <p>A 100nF capacitor placed 10mm from the target IC power pin provides virtually no decoupling at 100MHz. The trace inductance between capacitor and pin dominates. Yet poorly placed decoupling is one of the most common PCB layout mistakes — because it looks correct in the schematic without being correct physically.</p>
-                <p>We check placement within 0.5–1mm for every IC power pin, verify that via placement doesn't add parasitic inductance, and confirm value selection is appropriate for the target frequency range.</p>
-                <div class="finding-fix"><strong>→ Fix:</strong> Move decoupling within 0.5mm of VDD pin. Use via-in-pad where space is constrained. Verify value selection for the switching frequency.</div>
-              </div>
-            </div>
+ <div class="finding-card" style="border-radius:0;border:none;border-bottom:1px solid var(--line);">
+ <div class="finding-head">
+ <span class="t-h3" style="font-size:0.9375rem;">Missing or misplaced decoupling capacitors</span>
+ <span class="tag tag-red">Critical</span>
+ </div>
+ <div class="finding-body">
+ <p>A 100nF capacitor placed 10mm from the target IC power pin provides virtually no decoupling at 100MHz. The trace inductance between capacitor and pin dominates. Yet poorly placed decoupling is one of the most common PCB layout mistakes - because it looks correct in the schematic without being correct physically.</p>
+ <p>We check placement within 0.5–1mm for every IC power pin, verify that via placement doesn't add parasitic inductance, and confirm value selection is appropriate for the target frequency range.</p>
+ <div class="finding-fix"><strong>→ Fix:</strong> Move decoupling within 0.5mm of VDD pin. Use via-in-pad where space is constrained. Verify value selection for the switching frequency.</div>
+ </div>
+ </div>
 
-            <div class="finding-card" style="border-radius:0;border:none;border-bottom:1px solid var(--line);">
-              <div class="finding-head">
-                <span class="t-h3" style="font-size:0.9375rem;">EMI and EMC vulnerabilities</span>
-                <span class="tag tag-amber">Advisory</span>
-              </div>
-              <div class="finding-body">
-                <p>EMC test failures have their root in layout decisions more often than schematic errors. Unfiltered clock signals adjacent to IO lines. Switching converter traces without adequate filtering. Common-mode chokes placed after the connector rather than before. Inadequate stitching capacitors between split power planes.</p>
-                <p>Our team has direct experience preparing hardware for CE (CISPR 32, EN 55032) and FCC Part 15 testing. We review with knowledge of what pre-compliance chambers actually measure.</p>
-                <div class="finding-fix"><strong>→ Fix:</strong> Add guard traces on clock signals, move filtering components to cable entry points, verify stitching capacitor placement at plane transitions.</div>
-              </div>
-            </div>
+ <div class="finding-card" style="border-radius:0;border:none;border-bottom:1px solid var(--line);">
+ <div class="finding-head">
+ <span class="t-h3" style="font-size:0.9375rem;">EMI and EMC vulnerabilities</span>
+ <span class="tag tag-amber">Advisory</span>
+ </div>
+ <div class="finding-body">
+ <p>EMC test failures have their root in layout decisions more often than schematic errors. Unfiltered clock signals adjacent to IO lines. Switching converter traces without adequate filtering. Common-mode chokes placed after the connector rather than before. Inadequate stitching capacitors between split power planes.</p>
+ <p>Our team has direct experience preparing hardware for CE (CISPR 32, EN 55032) and FCC Part 15 testing. We review with knowledge of what pre-compliance chambers actually measure.</p>
+ <div class="finding-fix"><strong>→ Fix:</strong> Add guard traces on clock signals, move filtering components to cable entry points, verify stitching capacitor placement at plane transitions.</div>
+ </div>
+ </div>
 
-            <div class="finding-card" style="border-radius:0;border:none;">
-              <div class="finding-head">
-                <span class="t-h3" style="font-size:0.9375rem;">Thermal management failures</span>
-                <span class="tag tag-amber">Advisory</span>
-              </div>
-              <div class="finding-body">
-                <p>Thermal failures are intermittent and worsen with age — they appear under specific conditions after hours of runtime. MOSFETs in switching stages, linear regulators under full load, and MCUs running compute-intensive tasks are all common thermal concern areas.</p>
-                <p>We verify exposed-pad implementation, via array sizing and placement, copper pour area for heat spreading, and consistency with expected operating environment and ambient temperature.</p>
-                <div class="finding-fix"><strong>→ Fix:</strong> Increase thermal via count to ≥12 for power pads. Extend copper pour on inner layers. Verify thermal resistance against worst-case ambient and load.</div>
-              </div>
-            </div>
+ <div class="finding-card" style="border-radius:0;border:none;">
+ <div class="finding-head">
+ <span class="t-h3" style="font-size:0.9375rem;">Thermal management failures</span>
+ <span class="tag tag-amber">Advisory</span>
+ </div>
+ <div class="finding-body">
+ <p>Thermal failures are intermittent and worsen with age - they appear under specific conditions after hours of runtime. MOSFETs in switching stages, linear regulators under full load, and MCUs running compute-intensive tasks are all common thermal concern areas.</p>
+ <p>We verify exposed-pad implementation, via array sizing and placement, copper pour area for heat spreading, and consistency with expected operating environment and ambient temperature.</p>
+ <div class="finding-fix"><strong>→ Fix:</strong> Increase thermal via count to ≥12 for power pads. Extend copper pour on inner layers. Verify thermal resistance against worst-case ambient and load.</div>
+ </div>
+ </div>
 
-          </div>
+ </div>
 
-          <div style="text-align:center;">
-            <a href="contact.html" class="btn btn-primary">Request a review — catch yours →</a>
-          </div>
-        </div>
+ <div style="text-align:center;">
+ <a href="contact.html" class="btn btn-primary">Request a review - catch yours →</a>
+ </div>
+ </div>
 
-      </article>
+ </article>
 
-      <!-- Sidebar — sticky -->
-      <aside style="position:sticky;top:80px;display:flex;flex-direction:column;gap:1.25rem;">
+ <!-- Sidebar - sticky -->
+ <aside style="position:sticky;top:80px;display:flex;flex-direction:column;gap:1.25rem;">
 
-        <div class="card-flat">
-          <div class="t-label" style="margin-bottom:12px;">On this page</div>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
-            <li><a href="#mistakes" style="font-size:0.8375rem;color:var(--ink-3);">→ Common mistakes</a></li>
-            <li><a href="#faq" style="font-size:0.8375rem;color:var(--ink-3);">→ FAQ</a></li>
-            <li><a href="schematic-review.html" style="font-size:0.8375rem;color:var(--ink-3);">→ Schematic Review</a></li>
-            <li><a href="pcb-layout-review.html" style="font-size:0.8375rem;color:var(--ink-3);">→ PCB Layout Review</a></li>
-            <li><a href="services.html" style="font-size:0.8375rem;color:var(--ink-3);">→ All Services</a></li>
-          </ul>
-        </div>
+ <div class="card-flat">
+ <div class="t-label" style="margin-bottom:12px;">On this page</div>
+ <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+ <li><a href="#mistakes" style="font-size:0.8375rem;color:var(--ink-3);">→ Common mistakes</a></li>
+ <li><a href="#faq" style="font-size:0.8375rem;color:var(--ink-3);">→ FAQ</a></li>
+ <li><a href="schematic-review.html" style="font-size:0.8375rem;color:var(--ink-3);">→ Schematic Review</a></li>
+ <li><a href="pcb-layout-review.html" style="font-size:0.8375rem;color:var(--ink-3);">→ PCB Layout Review</a></li>
+ <li><a href="services.html" style="font-size:0.8375rem;color:var(--ink-3);">→ All Services</a></li>
+ </ul>
+ </div>
 
-        <div style="background:var(--ink-1);border-radius:var(--r-lg);padding:1.5rem;">
-          <div class="t-label" style="margin-bottom:10px;color:rgba(255,255,255,0.35);">Request a review</div>
-          <p style="font-size:0.875rem;color:rgba(255,255,255,0.55);margin-bottom:1.25rem;line-height:1.55;">Most issues we find would have caused at least one additional respin. Get your report in 2–3 days.</p>
-          <a href="contact.html" class="btn btn-blue" style="width:100%;justify-content:center;">Get started →</a>
-        </div>
+ <div style="background:var(--ink-1);border-radius:var(--r-lg);padding:1.5rem;">
+ <div class="t-label" style="margin-bottom:10px;color:rgba(255,255,255,0.35);">Request a review</div>
+ <p style="font-size:0.875rem;color:rgba(255,255,255,0.55);margin-bottom:1.25rem;line-height:1.55;">Most issues we find would have caused at least one additional respin. Get your report in 2–3 days.</p>
+ <a href="contact.html" class="btn btn-blue" style="width:100%;justify-content:center;">Get started →</a>
+ </div>
 
-        <div class="card-flat">
-          <div class="t-label" style="margin-bottom:10px;">Files we accept</div>
-          <div style="display:flex;flex-wrap:wrap;gap:4px;">
-            <span class="tag tag-grey">KiCad</span><span class="tag tag-grey">Altium</span>
-            <span class="tag tag-grey">Eagle</span><span class="tag tag-grey">OrCAD</span>
-            <span class="tag tag-grey">EasyEDA</span><span class="tag tag-grey">Gerbers</span>
-            <span class="tag tag-grey">PDF</span><span class="tag tag-grey">Excel BOM</span>
-          </div>
-        </div>
+ <div class="card-flat">
+ <div class="t-label" style="margin-bottom:10px;">Files we accept</div>
+ <div style="display:flex;flex-wrap:wrap;gap:4px;">
+ <span class="tag tag-grey">KiCad</span><span class="tag tag-grey">Altium</span>
+ <span class="tag tag-grey">Eagle</span><span class="tag tag-grey">OrCAD</span>
+ <span class="tag tag-grey">EasyEDA</span><span class="tag tag-grey">Gerbers</span>
+ <span class="tag tag-grey">PDF</span><span class="tag tag-grey">Excel BOM</span>
+ </div>
+ </div>
 
-      </aside>
-    </div>
-  </div>
+ </aside>
+ </div>
+ </div>
 </section>
 
 <!-- STATS -->
 <section class="s-md" style="background:var(--off-white);border-bottom:1px solid var(--line);">
-  <div class="container">
-    <div class="stat-row reveal">
-      <div class="stat-cell"><div class="stat-num">10+</div><div class="stat-label">Years experience</div></div>
-      <div class="stat-cell"><div class="stat-num">3</div><div class="stat-label">Review types</div></div>
-      <div class="stat-cell"><div class="stat-num">2–3</div><div class="stat-label">Day turnaround</div></div>
-      <div class="stat-cell"><div class="stat-num">100%</div><div class="stat-label">Human review</div></div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="stat-row reveal">
+ <div class="stat-cell"><div class="stat-num">10+</div><div class="stat-label">Years experience</div></div>
+ <div class="stat-cell"><div class="stat-num">3</div><div class="stat-label">Review types</div></div>
+ <div class="stat-cell"><div class="stat-num">2–3</div><div class="stat-label">Day turnaround</div></div>
+ <div class="stat-cell"><div class="stat-num">100%</div><div class="stat-label">Human review</div></div>
+ </div>
+ </div>
 </section>
 
 <!-- FAQ -->
 <section id="faq" class="s-xl" style="border-bottom:1px solid var(--line);">
-  <div class="container" style="max-width:760px;">
-    <div class="section-line reveal"><span class="t-label">FAQ</span></div>
-    <h2 class="t-h2 reveal" style="margin-bottom:40px;">Frequently asked questions</h2>
-    <div class="faq-list reveal">
-      <div class="faq-item">
-        <div class="faq-q"><span class="q-text">What is a PCB design review?</span><span class="faq-toggle">+</span></div>
-        <div class="faq-a">A structured technical evaluation of your hardware design — schematic, PCB layout, and BOM — carried out by an experienced hardware engineer before you commit to fabrication. It identifies errors, risks, and improvement opportunities while they're still cheap and fast to fix. Think of it as a code review, but for your circuit board. The goal is to catch the things that ERC and DRC can't see — errors that require engineering judgment rather than rule-checking.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="q-text">When should I get a PCB reviewed?</span><span class="faq-toggle">+</span></div>
-        <div class="faq-a">Ideally before you place your first fabrication order. The earlier the review, the cheaper and faster issues are to fix. A schematic error caught before layout takes minutes to fix. The same error caught after fabrication takes weeks and thousands of dollars. We also review designs before moving from prototype to volume production, or after a failed prototype to validate a proposed fix before spinning again.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="q-text">How much does a PCB design review cost?</span><span class="faq-toggle">+</span></div>
-        <div class="faq-a">Pricing is based on design complexity — layer count, board area, type of review, and any specific analysis required. We offer three packages: Basic (high-level scan), Standard (full schematic + layout + BOM), and Advanced (deep engineering analysis including signal integrity, thermal, and a review call). In every case, the review cost is a fraction of a single PCB respin. Contact us with a brief description of your design for a specific quote.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="q-text">What files do I need to provide?</span><span class="faq-toggle">+</span></div>
-        <div class="faq-a">For a Standard or Advanced review: schematic (PDF and/or native EDA file — KiCad, Altium, Eagle, OrCAD, EasyEDA), PCB layout (native or Gerbers), and BOM (Excel, CSV, or PDF). Additional context about the design's application, operating environment, power requirements, and any specific concerns is always useful and may affect the findings.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="q-text">How long does a review take?</span><span class="faq-toggle">+</span></div>
-        <div class="faq-a">Standard reviews: 2–3 business days from receiving all required files. Advanced reviews: 4–5 business days. Rush turnaround (next business day) is available for straightforward designs. We confirm the turnaround estimate when your files are received.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="q-text">Is my design kept confidential?</span><span class="faq-toggle">+</span></div>
-        <div class="faq-a">Yes. All designs are treated as strictly confidential. NDAs are available on request and are standard for any client who requires one. We recommend arranging this before files are transferred.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="q-text">What format is the report delivered in?</span><span class="faq-toggle">+</span></div>
-        <div class="faq-a">A structured PDF with severity-rated findings (Critical / Advisory / Informational), specific component or net references for each issue, and concrete actionable recommendations. For Standard and Advanced reviews, annotated design files with issues marked directly in the schematic or layout are also included.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="q-text">Do you review designs for regulated industries?</span><span class="faq-toggle">+</span></div>
-        <div class="faq-a">Yes. Our team has experience across consumer electronics, medical devices (IEC 60601), industrial systems (IEC 61000), and automotive electronics. We apply the relevant regulatory considerations to the review when applicable, and flag where your design may need attention for compliance.</div>
-      </div>
-    </div>
-  </div>
+ <div class="container" style="max-width:760px;">
+ <div class="section-line reveal"><span class="t-label">FAQ</span></div>
+ <h2 class="t-h2 reveal" style="margin-bottom:40px;">Frequently asked questions</h2>
+ <div class="faq-list reveal">
+ <div class="faq-item">
+ <div class="faq-q"><span class="q-text">What is a PCB design review?</span><span class="faq-toggle">+</span></div>
+ <div class="faq-a">A structured technical evaluation of your hardware design - schematic, PCB layout, and BOM - carried out by an experienced hardware engineer before you commit to fabrication. It identifies errors, risks, and improvement opportunities while they're still cheap and fast to fix. Think of it as a code review, but for your circuit board. The goal is to catch the things that ERC and DRC can't see - errors that require engineering judgment rather than rule-checking.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q"><span class="q-text">When should I get a PCB reviewed?</span><span class="faq-toggle">+</span></div>
+ <div class="faq-a">Ideally before you place your first fabrication order. The earlier the review, the cheaper and faster issues are to fix. A schematic error caught before layout takes minutes to fix. The same error caught after fabrication takes weeks and thousands of dollars. We also review designs before moving from prototype to volume production, or after a failed prototype to validate a proposed fix before spinning again.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q"><span class="q-text">How much does a PCB design review cost?</span><span class="faq-toggle">+</span></div>
+ <div class="faq-a">Pricing is based on design complexity - layer count, board area, type of review, and any specific analysis required. We offer three packages: Basic (high-level scan), Standard (full schematic + layout + BOM), and Advanced (deep engineering analysis including signal integrity, thermal, and a review call). In every case, the review cost is a fraction of a single PCB respin. Contact us with a brief description of your design for a specific quote.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q"><span class="q-text">What files do I need to provide?</span><span class="faq-toggle">+</span></div>
+ <div class="faq-a">For a Standard or Advanced review: schematic (PDF and/or native EDA file - KiCad, Altium, Eagle, OrCAD, EasyEDA), PCB layout (native or Gerbers), and BOM (Excel, CSV, or PDF). Additional context about the design's application, operating environment, power requirements, and any specific concerns is always useful and may affect the findings.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q"><span class="q-text">How long does a review take?</span><span class="faq-toggle">+</span></div>
+ <div class="faq-a">Standard reviews: 2–3 business days from receiving all required files. Advanced reviews: 4–5 business days. Rush turnaround (next business day) is available for straightforward designs. We confirm the turnaround estimate when your files are received.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q"><span class="q-text">Is my design kept confidential?</span><span class="faq-toggle">+</span></div>
+ <div class="faq-a">Yes. All designs are treated as strictly confidential. NDAs are available on request and are standard for any client who requires one. We recommend arranging this before files are transferred.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q"><span class="q-text">What format is the report delivered in?</span><span class="faq-toggle">+</span></div>
+ <div class="faq-a">A structured PDF with severity-rated findings (Critical / Advisory / Informational), specific component or net references for each issue, and concrete actionable recommendations. For Standard and Advanced reviews, annotated design files with issues marked directly in the schematic or layout are also included.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q"><span class="q-text">Do you review designs for regulated industries?</span><span class="faq-toggle">+</span></div>
+ <div class="faq-a">Yes. Our team has experience across consumer electronics, medical devices (IEC 60601), industrial systems (IEC 61000), and automotive electronics. We apply the relevant regulatory considerations to the review when applicable, and flag where your design may need attention for compliance.</div>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- CTA -->
 <section class="s-lg">
-  <div class="container">
-    <div class="cta-band reveal">
-      <div>
-        <h2 class="t-h2">Ready to prevent your next respin?</h2>
-        <p>Fast turnaround. Actionable results. No fluff.</p>
-      </div>
-      <div class="cta-band-btns">
-        <a href="contact.html" class="btn btn-blue btn-lg">Request a review →</a>
-        <a href="services.html" class="btn btn-ghost btn-lg" style="color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.15);">View services</a>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="cta-band reveal">
+ <div>
+ <h2 class="t-h2">Ready to prevent your next respin?</h2>
+ <p>Fast turnaround. Actionable results. No fluff.</p>
+ </div>
+ <div class="cta-band-btns">
+ <a href="contact.html" class="btn btn-blue btn-lg">Request a review →</a>
+ <a href="services.html" class="btn btn-ghost btn-lg" style="color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.15);">View services</a>
+ </div>
+ </div>
+ </div>
 </section>
 
 <footer id="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><a href="index.html" class="nav-logo" style="display:inline-flex;"><span class="logo-dot"></span>pcbreview.io</a><p>PCB design review for hardware engineers and product companies.</p></div>
-      <div class="footer-col"><h5>Services</h5><ul><li><a href="schematic-review.html">Schematic Review</a></li><li><a href="pcb-layout-review.html">PCB Layout Review</a></li><li><a href="services.html">All Services</a></li></ul></div>
-      <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer-col"><h5>On this page</h5><ul><li><a href="#mistakes">Common Mistakes</a></li><li><a href="#faq">FAQ</a></li></ul></div>
-    </div>
-    <div class="footer-bottom"><p>© 2025 pcbreview.io</p><p>Built by engineers, for engineers.</p></div>
-  </div>
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand"><a href="index.html" class="nav-logo" style="display:inline-flex;font-size:1rem;gap:7px;"><span class="logo-dot" style="width:9px;height:9px;"></span>pcbreview.com</a><p>PCB design review by senior hardware engineers. Built for startups, solo developers, and small product teams.</p></div>
+ <div class="footer-col"><h5>Services</h5><ul><li><a href="schematic-review.html">Schematic Review</a></li><li><a href="pcb-layout-review.html">PCB Layout Review</a></li><li><a href="services.html">All Services</a></li></ul></div>
+ <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+ <div class="footer-col"><h5>On this page</h5><ul><li><a href="#mistakes">Common Mistakes</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+ </div>
+ <div class="footer-bottom"><p>© 2025 pcbreview.com</p><p>Built by engineers, for engineers.</p></div>
+ </div>
 </footer>
 <script src="main.js"></script>
 </body>
