@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>BOM Review | PCBReview.io</title>
+  <meta name="description" content="Professional BOM review service. Identify sourcing risks, incorrect components, and cost optimisations before production." />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- NAV -->
+<header id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <span class="logo-dot"></span>
+      PCBReview.io
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/schematic-review.html">Schematic</a></li>
+      <li><a href="/pcb-review.html">PCB Layout</a></li>
+      <li><a href="/bom-review.html" class="active">BOM</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <a href="/#contact" class="btn btn-blue">Request review</a>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="page-hdr">
+  <div class="container">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span>BOM Review</span>
+    </div>
+
+    <div class="t-label">Service</div>
+
+    <h1 class="t-h2">
+      BOM Review<br>
+      <span class="t-body">Catch sourcing and production risks early</span>
+    </h1>
+
+    <p class="sub">
+      A structured review of your Bill of Materials to identify availability issues, incorrect specifications, and cost risks before you order components.
+    </p>
+
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="s-lg">
+  <div class="container">
+
+    <div class="col-2">
+
+      <!-- LEFT: WHAT IS CHECKED -->
+      <div>
+
+        <div class="section-line">
+          <span class="t-label">What is checked</span>
+        </div>
+
+        <ul class="checklist">
+          <li>Component availability & lifecycle (NRND / obsolete)</li>
+          <li>Single-source and supply chain risks</li>
+          <li>Incorrect or incomplete specifications</li>
+          <li>Voltage ratings and tolerance margins</li>
+          <li>Package vs footprint compatibility</li>
+          <li>Manufacturer part number consistency</li>
+          <li>Alternative component suggestions</li>
+          <li>Cost optimisation opportunities</li>
+        </ul>
+
+      </div>
+
+      <!-- RIGHT: EXAMPLES -->
+      <div>
+
+        <div class="section-line">
+          <span class="t-label">Example findings</span>
+        </div>
+
+        <!-- FINDING 1 -->
+        <div class="finding-card">
+
+          <div class="finding-head">
+            <div class="t-h3">Regulator obsolete</div>
+            <span class="tag tag-red">Critical</span>
+          </div>
+
+          <div class="finding-body">
+            <p>
+              Selected LDO is marked NRND and has limited distributor stock, creating a high production risk.
+            </p>
+
+            <div class="finding-fix">
+              <strong>Fix:</strong> Replace with pin-compatible alternative with active lifecycle (e.g. modern LDO series).
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SPACING -->
+        <div style="height:12px;"></div>
+
+        <!-- FINDING 2 -->
+        <div class="finding-card">
+
+          <div class="finding-head">
+            <div class="t-h3">Capacitor voltage rating too low</div>
+            <span class="tag tag-amber">Warning</span>
+          </div>
+
+          <div class="finding-body">
+            <p>
+              10V rated capacitor used on a 9V rail. Insufficient derating reduces reliability.
+            </p>
+
+            <div class="finding-fix">
+              <strong>Fix:</strong> Use ≥16V rated capacitor to ensure safe operating margin.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="s-md">
+  <div class="container">
+
+    <div class="section-line">
+      <span class="t-label">Process</span>
+    </div>
+
+    <div class="steps-grid">
+
+      <div class="step-item">
+        <span class="step-num">01</span>
+        <h3>Submit BOM</h3>
+        <p>Upload your BOM file (Excel, CSV, or export from your CAD tool).</p>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">02</span>
+        <h3>Review</h3>
+        <p>Detailed analysis of availability, specs, and production risks.</p>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">03</span>
+        <h3>Receive report</h3>
+        <p>Clear, prioritised findings with actionable fixes.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="s-md">
+  <div class="container">
+
+    <div class="cta-band">
+
+      <div>
+        <h2 class="t-h2">Avoid sourcing surprises</h2>
+        <p>Get your BOM reviewed before committing to production.</p>
+      </div>
+
+      <div class="cta-band-btns">
+        <a href="/#contact" class="btn btn-blue btn-lg">Request BOM review</a>
+        <a href="/#pricing" class="btn btn-ghost btn-lg">See pricing</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+
+    <div class="footer-bottom">
+      <p>© 2026 PCBReview.io</p>
+      <p>Independent PCB design review service</p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
